@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Digital";
+    src: url("./digital-7.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.body {
+    background: rgb(110,110,110);
+    background: radial-gradient(circle, rgba(110,110,110,1) 0%, rgba(51,44,35,1) 100%);
+}
+
+.wrap  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.lazy {
+    opacity: 0;
+    transition: all .4s 1s ease-in-out;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 380px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.keys__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: relative;
+    z-index: 0;
+}
+
+.keys__name {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.keys__desc {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.clap {
+    background-color: #de3dd1;
+}
+
+.clap.active,
+.clap:hover {
+    box-shadow: 0 0 12px 3px #de3dd1;
+    z-index: 1;
+}
+
+.clap:active {
+    box-shadow: 0 0 0 3px #de3dd1;
+}
+
+.hihat {
+    background-color: #853dde;
+}
+
+.hihat.active,
+.hihat:hover {
+    box-shadow: 0 0 12px 3px #945ddd;
+    z-index: 1;
+}
+
+.hihat:active {
+    box-shadow: 0 0 0 3px #945ddd;
+}
+
+.kick {
+    background-color: #3d6bde;
+}
+
+.kick.active,
+.kick:hover {
+    box-shadow: 0 0 12px 3px #4f77da;
+    z-index: 1;
+}
+
+.kick:active {
+    box-shadow: 0 0 0 3px #4f77da;
+}
+
+.openhat {
+    background-color: #2ebcdf;
+}
+
+.openhat.active,
+.openhat:hover {
+    box-shadow: 0 0 12px 3px #3dbede;
+    z-index: 1;
+}
+
+.openhat:active {
+    box-shadow: 0 0 0 3px #3dbede;
+}
+
+.boom {
+    background-color: #37c454;
+}
+
+.boom.active,
+.boom:hover {
+    box-shadow: 0 0 12px 3px #37c454;
+    z-index: 1;
+}
+
+.boom:active {
+    box-shadow: 0 0 0 3px #37c454;
+}
+
+.ride {
+    background-color: #de8b3d;
+}
+
+.ride.active,
+.ride:hover {
+    box-shadow: 0 0 12px 3px #de8b3d;
+    z-index: 1;
+}
+
+.ride:active {
+    box-shadow: 0 0 0 3px #de8b3d;
+}
+
+.snare {
+    background-color: #de583d;
+}
+
+.snare.active,
+.snare:hover {
+    box-shadow: 0 0 12px 3px #de583d;
+    z-index: 1;
+}
+
+.snare:active {
+    box-shadow: 0 0 0 3px #de583d;
+}
+
+.tom {
+    background-color: #decb3d;
+}
+
+.tom.active,
+.tom:hover {
+    box-shadow: 0 0 12px 3px #decb3d;
+    z-index: 1;
+}
+
+.tom:active {
+    box-shadow: 0 0 0 3px #decb3d;
+}
+
+.tink {
+    background-color: #de3d3d;
+}
+
+.tink.active,
+.tink:hover {
+    box-shadow: 0 0 12px 3px #db6161;
+    z-index: 1;
+}
+
+.tink:active {
+    box-shadow: 0 0 0 3px #db6161;
+}
+
+.keys__item .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /*transform: translate(-50%, -50%) scale(0);*/
+    transform: scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        /*transform: translate(-50%, -50%) scale(3);*/
+        transform: scale(3);
+        opacity: 0;
+    }
+}
